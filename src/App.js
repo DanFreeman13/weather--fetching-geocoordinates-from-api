@@ -137,20 +137,22 @@ class App extends Component {
 
           <div className="dayContainer">
             <section className="header">
-              <h1>{this.state.dailyprops.countryname}</h1>
-              <h2>{this.state.dailyprops.timezone}</h2>
-              <h3>{this.state.dailyprops.summary}</h3>
+              <h1>Country: {this.state.dailyprops.countryname}</h1>
+              <h2>Timezone: {this.state.dailyprops.timezone}</h2>
+              <h3>Todays Forecast: {this.state.dailyprops.summary}</h3>
+              <h4>Weather next 8 days</h4>
             </section>
 
             <div className="dayInfo">
             {dailyInfo.map(each => {
               return (
                 <div key={each.key} className="info" >
-                <p>{ each.pressure }</p>
-                <p>{ each.humidity }</p>
+                <img src="http://www.automazionenews.it/files/2013/02/cloud-300x225.jpg"/>
+                <p><strong>Pressure:</strong> { each.pressure } <strong>mmHg</strong></p>
+                <p><strong>Humidity:</strong> { each.humidity } <strong>%</strong></p>
+                <p><strong>Max:</strong> { each.maxtemp }<strong>°F</strong> / {parseInt((each.maxtemp-32)/1.8)}<strong>°C</strong></p>
+                <p><strong>Min:</strong> { each.mintemp }<strong>°F</strong> / {parseInt((each.mintemp-32)/1.8)}<strong>°C</strong></p>
                 <p>{ each.summary }</p>
-                <p>{ each.mintemp }</p>
-                <p>{ each.maxtemp }</p>
                 </div>
               )
             })}
