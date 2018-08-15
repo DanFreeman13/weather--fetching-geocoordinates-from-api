@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .app {
   background-color: #f5f6fa;
 }
@@ -28,10 +32,18 @@
   border-right: 1px solid #edeef2;
 }
 
+.app__aside a{
+  padding: 10px auto;
+}
+
 .app__title {
   color: #969dae;
   font-size: 11px;
   margin-bottom: 6px;
+}
+
+.app__aside a{
+  padding: 5px 0;
 }
 
 .app__country {
@@ -62,4 +74,3 @@
   display: flex;
   height: calc(100vh - 40px);
 }
-
